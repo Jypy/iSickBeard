@@ -1,0 +1,18 @@
+#!/bin/sh
+
+folder_app="/Applications/iSickBeard.app/"
+folder_data="/var/mobile/Documents/JypyzProducts/iSickBeard/"
+echo
+echo Data folder: $folder_data
+echo
+echo Adjusting permissions...
+
+chown -R root:wheel $folder_app
+chmod 755 $folder_app
+chown -R mobile:mobile $folder_data
+chmod 775 $folder_data
+chmod +x $folder_app/*.py
+chmod +x $folder_app/start.sh
+
+echo
+echo Done!

@@ -1,0 +1,27 @@
+#!/bin/sh
+
+folder_app="/Applications/iSickBeard.app/"
+folder_data="/var/mobile/Documents/JypyzProducts/iSickBeard/"
+
+echo
+
+if [ -f ${folder_data}config.ini ] ;then
+	echo Data OK!
+else
+	mkdir -p $folder_data 
+	
+	if [ -f ${folder_app}config.ini ] ;then
+		echo Moving data...
+		mv ${folder_app}cache ${folder_data}
+		mv ${folder_app}Logs ${folder_data}
+		mv ${folder_app}cache.db ${folder_data}
+		mv ${folder_app}sickbeard.db* ${folder_data}
+		mv ${folder_app}config.ini* ${folder_data}
+	else
+		echo Fresh install!
+	fi
+fi
+
+echo
+echo Pre-flight Done!
+echo

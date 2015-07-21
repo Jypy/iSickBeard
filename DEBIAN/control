@@ -1,0 +1,14 @@
+Package: eu.jypy.isickbeard
+Version: 0.507b
+Section: Jypyz.Products.iSICK
+Priority: standard
+Installed-Size: 
+Maintainer: Jean-Philippe Bouillot (Jypy) <jypyzproducts@jypy.eu>
+Pre-Depends: firmware (>= 3.0)
+Depends: eu.jypy.iconpack, python, eu.jypy.python-cheetah-ios, eu.jypy.python-yenc-ios
+Architecture: iphoneos-arm
+Name: iSickBeard
+Author: Jean-Philippe Bouillot (Jypy) <jypyzproducts@jypy.eu>
+Depiction: http://jypy.eu/products/iSICK_main.html
+Description: SickBeard Newsgroup PVR for iDevices
+Sponsor: Jypy.eu <http://jypy.eu>
